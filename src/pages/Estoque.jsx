@@ -49,7 +49,7 @@ function MainPag(){
 
     return(
         <ContainerMain> 
-           
+           <></>
         </ContainerMain>
 
     

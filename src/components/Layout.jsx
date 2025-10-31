@@ -23,9 +23,9 @@ const MainArea = styled.main`
 
 function Layout(){
     return(
-      <ContainerLayout>
+      <ContainerLayout> {/*Container da pag */}
       <HeaderArea>
-        <Header />
+        <Header /> {/*header definido da pag */}
       </HeaderArea>
 
       <MainArea>

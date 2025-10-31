@@ -7,15 +7,14 @@ import logo from "../assets/Logo.png"
 
 
 const ContainerCad = styled.div`
-    background-image: url(${logo}) ;
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-position: center;
-    background-position: top;
+    background-image: url(${logo}) ; // colocando imagem na pag
+    background-repeat: no-repeat; // nao repitir a imgem
+    background-size: 300px; // tamanho da imagem 
+    background-position: center; // manter a imagem no centro 
+    background-position: top; //e com o topo 0 
     border: 1px solid red;
-    margin-left: 23%;
     position: absolute; 
-    top: 0; // position absolut top 0 para deixar o main no topo da pagina
+    top: 10px; // position absolut top 0 para deixar o main no topo da pagina
     width: 76%;
     height: 30rem;
     display: flex;
@@ -47,16 +46,16 @@ const BtnSalvar =styled.button`
 `
 
 function Cadastro(){
-    const [nome, setNome] = useState("");
+    const [nome, setNome] = useState(""); {/*useState("") -> inicia com o estado vazio */}
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 
     
   
     const handleCadastro = (e) =>{
-        e.preventDefault();
+        e.preventDefault(); {/*previne que a pagina recarregue apos o submit */}
 
-          if(nome.trim() === ""){ //o trim remove os espaços em branco no inicio e no final
+          if(nome.trim() === ""){   //*o trim remove os espaços em branco no inicio e no final
             alert("Nome nao pode ser vazio");
             return;
          }
@@ -73,24 +72,23 @@ function Cadastro(){
 
 
 
-        const usuario = {nome, email, senha};
+        const usuario = {nome, email, senha}; {/*Aqui pega o valor digitado */}
 
-        const usuariosSalvos = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const usuariosSalvos = JSON.parse(localStorage.getItem("usuarios")) || []; {/*Aqui busca se ja a uma lista salva chamada "usuarios" se nao tiver cria um array vazio [] */}
 
-        usuariosSalvos.push(usuario);
+        usuariosSalvos.push(usuario);  {/*Salva um usuario novo */}
 
-        localStorage.setItem("usuarioswd", JSON.stringify(usuariosSalvos));
+        localStorage.setItem("usuarios", JSON.stringify(usuariosSalvos)); {/*transforma o array de objetos em texto JSON. */}
 
-        alert("Usuario cadastrado com sucesso!");
+        alert("Usuario cadastrado com sucesso!"); {/*Aqui limpa os dados para receber novos dados */}
         setNome("");
         setEmail("");
         setSenha("");
     };
 
  return(
-    <div>
-         <Header/>
-        <ContainerCad>
+    <ContainerCad>
+    
            
            <Form onSubmit={handleCadastro}>
 
@@ -125,8 +123,7 @@ function Cadastro(){
 
             <BtnSalvar type="submit">Salvar</BtnSalvar>
            </Form>
-        </ContainerCad>
-    </div>
+    </ContainerCad>
         
     )
 }

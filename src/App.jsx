@@ -41,11 +41,13 @@ import Cadastro from './pages/Cadastro'
 function App() {
 
  return(
-    <BrowserRouter>
+    <BrowserRouter> {/*tudo que esta aqui dentro faz parte do sistema de rotas*/}
       <Routes>
-        <Route path="/" element={<Layout/>}>
-         <Route index element={<Home />}/>
-         <Route path="estoque" element={<Estoque/>} />
+        <Route path="/" element={<Layout/>}> {/*O atributo path no React Router define qual URL o navegador precisa acessar para que aquele componente seja exibido. */} {/*Dentro do Route esta carregando layout se colocar fora do route layout nao sera carregado */}
+         <Route index element={<Home />}/>  {/*index significa que essa é a rota padrão dentro de /.
+    → Ou seja, quando o usuário acessa http://localhost:3000/, vai renderizar <Home /> dentro do <Layout />. */}
+         <Route path="estoque" element={<Estoque/>} /> {/*E dentro do <Outlet /> do layout, coloca o componente <Estoque />. */}
+         <Route path="cadastro" element={<Cadastro/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
