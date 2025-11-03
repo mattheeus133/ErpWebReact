@@ -17,7 +17,7 @@ const HeaderArea = styled.div`
 const MainArea = styled.main`
   flex: 1;
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 0px;
   overflow-y: auto;
 `;
 
