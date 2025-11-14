@@ -33,6 +33,25 @@ const Info = styled.div`
     top: 0;
 `
 
+const Input = styled.input`
+    border: 1px solid black;
+    width: 20%;
+    min-width: 15%;
+    height: 2em;
+    border-radius: 5px;
+
+`
+const Form = styled.form`
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    margin-right: 10px; // margin a direita 
+    gap: 10px; // espaçamento dos elementos
+
+`
+
 function MainPag(){
    /* const [valor, setValor] = useState('');
 
@@ -73,16 +92,16 @@ function MainPag(){
     return(
         <ContainerMain> 
            <Busca>
-        <form onSubmit={buscarProdutoPorCodigo}>
-            <input
-                type="text"
-                placeholder="Digite o codigo"
-                value={codigo}
-                onChange={(e) => setCodigo(e.target.value)}
-            
-            />
-            <button type="submit">Buscar</button>
-        </form>
+            <Form onSubmit={buscarProdutoPorCodigo}>
+                <Input
+                    type="text"
+                    placeholder="Digite o codigo"
+                    value={codigo}
+                    onChange={(e) => setCodigo(e.target.value)}
+                
+                />
+                <button type="submit">Buscar</button>
+            </Form>
            </Busca>
            <MainConteudo>
 

@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Header from './components/Header'
 import HomePag from './pages/HomePag'
 import Cadastro from './pages/Cadastro'
+import Fornecedor from './pages/Fornecedor'
 
 
 {/*function Layout(){
@@ -48,6 +49,7 @@ function App() {
     → Ou seja, quando o usuário acessa http://localhost:3000/, vai renderizar <Home /> dentro do <Layout />. */}
          <Route path="estoque" element={<Estoque/>} /> {/*E dentro do <Outlet /> do layout, coloca o componente <Estoque />. */}
          <Route path="cadastro" element={<Cadastro/>}/>
+         <Route path="fornecedor" element={<Fornecedor/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
