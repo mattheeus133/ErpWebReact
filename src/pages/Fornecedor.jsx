@@ -3,6 +3,7 @@
 import styled from "styled-components"
 
 
+/*Inicio do DivInput*/
 const ContainerFor = styled.div`
     border: 1px solid red;
     height: 100%;
@@ -26,7 +27,14 @@ const Input = styled.input`
   width: 20%;
   
 `
+/*Fim do DivInput*/
 
+/*Inicio do DivMain*/
+const DivMain = styled.div`
+`
+/*Fim do DivMain */
+
+/*Inicio do DivBtns */
 const DivBtns = styled.div`
     border: 1px solid blue;
     position: relative;
@@ -34,6 +42,7 @@ const DivBtns = styled.div`
     height: 50px;
     display: flex;
     align-items: center;
+    gap: 2%;
 `
 
 const BtnCadForne =styled.button`
@@ -50,17 +59,31 @@ const BtnCadForne =styled.button`
 
 `
 
+const BtnAlterarForne = styled.button`
+    border-radius: 8px;
+    border: 2px solid #CDCD00;
+    width: 200px;
+   
+
+      &:hover{
+        background: #CDCD00;
+        color: white;
+     }
+
+`
+
 const BtnDelForne = styled.button`
      border-radius: 8px;
      border: 2px solid #ff0000;
      width: 200px;
-     margin: 2%;
+     
 
      &:hover{
         background: #ff0000;
         color: white;
      }
 `
+/*Fim do DivBtns */
 
 
 
@@ -68,15 +91,21 @@ function Fornecedor (){
     return(
         <ContainerFor>
             <DivInput>
-                <Label>Buscar Fornecedor: </Label>
+                <Label>Buscar Produto: </Label>
                 <Input
                 type="text"
                 placeholder="Nome fornecedor"
                 />
             </DivInput>
-      
+                <DivMain>
+                    <div style={{border:"1px solid red"}}> </div>
+                    <div> </div>
+                    <div> </div>
+
+                </DivMain>
             <DivBtns>
                 <BtnCadForne>+ Cadastra fornecedor</BtnCadForne>
+                <BtnAlterarForne> Alterar Cad fornecedor</BtnAlterarForne>
                 <BtnDelForne>- Excluir Fornecedor</BtnDelForne>
             </DivBtns>
     
