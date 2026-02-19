@@ -91,12 +91,12 @@ function HomePag(){
                     <Img src= {logo} alt='Logo' /> {/*Colocar imagem logo*/}
         
                 <Ul className="absolute left-150 top-0 h-16 ...">
-                    <Li className="block w-full h-full flex items-center justify-center">Sobre</Li>
+                    <Li> <Link to={"/app"}  className="block w-full h-full flex items-center justify-center">Home</Link></Li>
                     <Li className="block w-full h-full flex items-center justify-center">Funções</Li>
-                    <Li className="block w-full h-full flex items-center justify-center">Contato</Li>
+                    <Li className="block w-full h-full flex items-center justify-center"> <Link to={"/login"} className="block w-full h-full flex items-center justify-center">Login</Link> </Li>
                 </Ul>
 
-                <BtnLogin className="absolute top-0 right-10 size-16 ..." > <Link to={"/login"} className="block w-full h-full flex items-center justify-center">Login</Link> </BtnLogin>
+                <BtnLogin className="absolute top-0 right-10 size-16 ..." ><Link to={"/teste"}>Teste</Link></BtnLogin>
 
               
             </Nav>

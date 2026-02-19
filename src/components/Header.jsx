@@ -43,10 +43,10 @@ function Header(){
             </div>
            
             <Ul>
-                <Li><Link to={"/"}  className="block w-full h-full">Home</Link></Li>
-                <Li><Link to={"/estoque"}  className="block w-full h-full">Estoque</Link></Li>
-                <Li><Link to={"/cadastro"} className="block w-full h-full">Cadastro Cliente</Link></Li>
-                <Li><Link to={"/fornecedor"} className="block w-full h-full">Fornecedor</Link></Li>
+                <Li><Link to={"/app"}  className="block w-full h-full">Home</Link></Li>
+                <Li><Link to={"/app/estoque"}  className="block w-full h-full">Estoque</Link></Li>
+                <Li><Link to={"/app/cadastro"} className="block w-full h-full">Cadastro Cliente</Link></Li>
+                <Li><Link to={"/app/fornecedor"} className="block w-full h-full">Fornecedor</Link></Li>
                 <Li>Compras</Li>
                 <Li>Vendas</Li>
                 <Li>Saida</Li>
