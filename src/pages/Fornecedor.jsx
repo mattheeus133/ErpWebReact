@@ -1,7 +1,8 @@
 //Sempre lembrar de criar a rota da pag
 
 import styled from "styled-components"
-
+import {Modal} from "../components/Modal";
+import { useState } from "react";
 
 /*Inicio do DivInput*/
 const ContainerFor = styled.div`
@@ -85,9 +86,31 @@ const BtnDelForne = styled.button`
 `
 /*Fim do DivBtns */
 
+const Input2 = styled.input`
+    border: 2px solid #999999;
+`
+
+/*Inicio Modal */
+
+const FormModal = styled.form`
+    
+`
+const DivLadoA = styled.div`
+    
+`
+const DivAjusteA = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 231px;
+    gap: 10px;
+`
+/*Fim Modal */
 
 
 function Fornecedor (){
+
+    const [open, setOpen] = useState(false);
+
     return(
         <ContainerFor>
             <DivInput>
@@ -104,11 +127,39 @@ function Fornecedor (){
 
                 </DivMain>
             <DivBtns>
-                <BtnCadForne>+ Cadastra fornecedor</BtnCadForne>
+                <BtnCadForne onClick={() => setOpen(true)}>+ Cadastra fornecedor</BtnCadForne>
                 <BtnAlterarForne> Alterar Cad fornecedor</BtnAlterarForne>
                 <BtnDelForne>- Excluir Fornecedor</BtnDelForne>
             </DivBtns>
-    
+            <div>
+                <Modal isOpen = {open} onClose={() => setOpen(false)}>
+                    <FormModal>
+                        <DivLadoA>
+                            <label>Cadastro de Fornecedor</label>
+
+                            <DivAjusteA>
+                            <label>Razão Social</label>
+                            <Input2
+                            type="text"
+                            placeholder=""
+                            />
+                        
+                            <label>Nome Fantasia</label>
+                            <Input2
+                            type="text"
+                            placeholder=""
+                            />
+
+                            <label>Tipo Pessoa</label>
+                            <select>
+                                <option value={"CPF"}>CPF</option>
+                                <option value={"CNPJ"}>CNPJ</option>
+                            </select>
+                        </DivAjusteA>
+                        </DivLadoA>
+                    </FormModal>
+                </Modal>
+            </div>
 
         </ContainerFor>
        
