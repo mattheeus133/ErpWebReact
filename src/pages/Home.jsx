@@ -11,7 +11,7 @@ function Home(){
         <Cards>
             <div>
                 <h1>Ola bem vindo ao Erp da sua empresa
-                    Sua empresa com melhore Erp do mercado ......
+                    Sua empresa com melhore Erp do mercado .........
                 </h1>
             </div>
         </Cards>
